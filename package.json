@@ -1,6 +1,6 @@
 {
   "name": "pg-parameterize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small helper to parameterize your node-pg query",
   "main": "index.js",
   "scripts": {
