@@ -1,5 +1,5 @@
 # pg-parameterize
-A small helper to parameterize your node-pg query when number of paramters varies.
+A small helper to parameterize your node-pg query when number of parameters varies.
 
 pg-paramterize finds ? in  your string and replaces them with correct numerical paramters ($1, $2, etc)
 
