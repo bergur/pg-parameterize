@@ -1,5 +1,5 @@
 # pg-parameterize
-A small helper to parameterize your node-pg query when number of par
+A small helper to parameterize your node-pg query when number of paramters varies.
 This can be helpful if you're creating your sql string dynamically
 
 Since node-postgres has numerical paramters ($1, $2) and sometimes the number of paramters varies it can be cumbersome to build the sql string.
