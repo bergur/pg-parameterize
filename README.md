@@ -1,9 +1,16 @@
 # pg-parameterize
 A small helper to parameterize your node-pg query when number of paramters varies.
-
 This can be helpful if you're creating your sql string dynamically
 
 pg-paramterize finds ? in  your string and replaces them with correct numerical paramters ($1, $2, etc)
+
+```
+SELECT * FROM table WHERE field = ?
+```
+becomes
+```
+SELECT * FROM table WHERE field = $1
+```
 
 ## Example
 ```javascript
