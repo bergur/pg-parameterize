@@ -3,7 +3,7 @@ A small helper to parameterize your node-pg query when number of paramters varie
 
 This can be helpful if you're creating your sql string dynamically
 
-pg-paramterize reads ? in  your string and replaces them with correct numerical paramters ($1, $2, etc)
+pg-paramterize finds ? in  your string and replaces them with correct numerical paramters ($1, $2, etc)
 
 ## Example
 ```javascript
