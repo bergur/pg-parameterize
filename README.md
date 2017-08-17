@@ -13,12 +13,12 @@ function simpleFind(options)
   
   if (options.type) {
     sql += ' AND type = ?'
-    params.push(options.type)
+    values.push(options.type)
   }
   
   if (options.zipcode) {
     sql += ' AND zipcode = ?'
-    params.push(options.type)
+    values.push(options.type)
   }
   
   let q = parameterize(text);
