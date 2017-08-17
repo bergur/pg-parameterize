@@ -21,6 +21,8 @@ function simpleFind(options)
     params.push(options.type)
   }
   
+  let q = parameterize(text);
+  
   return client.query(text, values);
  }
  ```
