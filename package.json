@@ -1,0 +1,32 @@
+{
+  "name": "pg-parameterize",
+  "version": "1.0.0",
+  "description": "A small helper to parameterize your node-pg query",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bergur/pg-parameterize.git"
+  },
+  "keywords": [
+    "postgres",
+    "node-postgres",
+    "parameter",
+    "query",
+    "?",
+    "$",
+    "$1"
+  ],
+  "author": "bergur@bergur.is",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bergur/pg-parameterize/issues"
+  },
+  "homepage": "https://github.com/bergur/pg-parameterize#readme",
+  "devDependencies": {
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0"
+  }
+}
