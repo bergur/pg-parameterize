@@ -1,5 +1,5 @@
 
-const parameterize = function(string) {
+const ordinal = function(string) {
     
     let index = 1;
     while(string.indexOf('?') !== -1) {
@@ -20,18 +20,18 @@ const flatten = function(arr) {
     },[])
 }
 
-const tuple = function(arr, parameterize) {
+const tuple = function(arr, ordinal) {
     const tuple = arr.map(function(item) {        
 	    return '(' + item.map(value => '?').join(',') +')';
     }).join(',');
     
-    if (!parameterize) {
+    if (!ordinal) {
         return tuple;
     } else {                
-        return this.parameterize(tuple);        
+        return this.ordinal(tuple);        
     }
 }
 
-exports.parameterize = parameterize;
+exports.ordinal = ordinal;
 exports.flatten = flatten;
 exports.tuple = tuple;
