@@ -1,4 +1,7 @@
 # pg-parameterize
+
+<span class="badge-npmversion"><a href="https://npmjs.org/package/pg-parameterize" title="View this project on NPM"><img src="https://img.shields.io/npm/v/pg-parameterize.svg" alt="NPM version" /></a></span>
+
 A small helper for [node-postgres](https://github.com/brianc/node-postgres) to help you with building your queries.
 
 Building dynamic queries can be tricky since node-postgres uses ordinal paramters ($1, $2, etc). That means that the parameter has a numerical value so there's a clear ordering of the variables. This module just modifies strings and arrays so it's easier to create SQL statements for the node-postgres query.
