@@ -1,3 +1,4 @@
+'use strict';
 const parameterize = require('./index');
 const expect = require('chai').expect;
 

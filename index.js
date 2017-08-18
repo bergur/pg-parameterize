@@ -1,4 +1,5 @@
 
+'use strict';
 const ordinal = function(string) {
     
     let index = 1;
