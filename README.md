@@ -87,7 +87,7 @@ becomes
  ['Flat','AB123',1,'Castle,'CD456',1]
 ```
 
-This can be helpful if you want to create a insert statement
+This can be helpful for multiple value inserts in one statement (multi-insert query)
 ### Example
 ```javascript
 function insert() {
