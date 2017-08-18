@@ -3,18 +3,6 @@ A small helper for [node-postgres](https://github.com/brianc/node-postgres) to h
 
 Building dynamic queries can be tricky since node-postgres uses ordinal paramters ($1, $2, etc). That means that the parameter has a numerical value so there's a clear ordering of the variables. This module just modifies strings and arrays so it's easier to create SQL statements for the node-postgres query.
 
-## Setup
-```sh
-npm install pg-parameterize --save
-```
-RequireJS
-```javasscript
-const parameterize = require('pg-parameterize');
-```
-ES6
-```javasscript
-import { ordinal, tuple, flatten } from 'pg-parameterize'
-```
 ## ordinal(string)
 This functions finds ? in  your string and replaces them with correct ordinal paramters.
 
@@ -101,7 +89,7 @@ This can be helpful if you want to create a insert statement
 function insert() {
   const array = [
     ['Flat','AB123',1],
-    ['Castle,'CD456',1]
+    ['Castle','CD456',1]
   ];
 
   const tuples = tuple(array,true);
