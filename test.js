@@ -40,7 +40,7 @@ describe('flatten', function() {
 })
 
 describe('tuple', function() {    
-    it.only('should return empty string when given array is empty', function() {
+    it('should return empty string when given array is empty', function() {
         const arr = [];
         const res = parameterize.tuple(arr);
         expect(res).to.eql('');
