@@ -42,8 +42,8 @@ function simpleFind(options)
  }
  ```
 
-## tuple(array,ordinal)
-This functions creates a tuples of ? or $1, $2 from a array of values depending on if the ordinal parameter is set or not.
+## tuple(array, makeOrdinal)
+This functions creates a tuples of ? or $1, $2 from a array of values depending on if the makeOrdinal parameter is set or not.
 
 ```
 const arr = [
@@ -52,9 +52,9 @@ const arr = [
 ```
 becomes
 ```
-(?,?,?) // ordinal = false
+(?,?,?) // makeOrdinal = false
 OR
-($1,$2,$3) // ordinal = true
+($1,$2,$3) // makeOrdinal = true
 ```
 
 This can be helpful if you want to create a insert statement
