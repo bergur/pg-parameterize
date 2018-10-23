@@ -7,7 +7,7 @@ A small helper for [node-postgres](https://github.com/brianc/node-postgres) to h
 
 Building dynamic queries can be tricky since node-postgres uses ordinal paramters ($1, $2, etc). That means that the parameter has a numerical value so there's a clear ordering of the variables. This module just modifies strings and arrays so it's easier to create SQL statements for the node-postgres query.
 
-## ordinal(string)
+## toOrdinal(string)
 This functions finds ? in  your string and replaces them with correct ordinal paramters.
 
 ```
@@ -36,13 +36,13 @@ function simpleFind(options)
     values.push(options.type)
   }
   
-  const sqlOrdinal = ordinal(sql);
+  const sqlOrdinal = toOrdinal(sql);
   
   return pool.query(sqlOrdinal, values);
  }
  ```
 
-## tuple(array, makeOrdinal)
+## toTuple(array, makeOrdinal)
 This functions creates a tuples of ? or $1, $2 from a array of values depending on if the makeOrdinal parameter is set or not.
 
 ```
@@ -64,7 +64,7 @@ function insert() {
   const array = [
     ['Flat','AB123',1]    
   ];
-  const tuples = tuple(array,true);
+  const tuples = toTuple(array,true);
   // ($1,$2,$3)
   const sql = 'INSERT INTO Houses(type,zipcode,available) VALUES'+ tuples ;
   // INSERT INTO Houses(type,zipcode,available) VALUES ($1,$2,$3)  
@@ -96,9 +96,9 @@ function insert() {
     ['Castle','CD456',1]
   ];
 
-  const tuples = tuple(array,true);
+  const tuples = toTuple(array,true);
   // ($1,$2,$3),($4,$5,$6)
-  const sql = 'INSERT INTO Houses(type,zipcode,available) VALUES'+ tuple(values,true);
+  const sql = 'INSERT INTO Houses(type,zipcode,available) VALUES'+ tuples
   // INSERT INTO Houses(type,zipcode,available) VALUES ($1,$2,$3),($4,$5,$6)
   const values = flatten(array)
   // ['Flat','AB123',1,'Castle,'CD456',1]
