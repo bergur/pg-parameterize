@@ -1,10 +1,15 @@
 {
   "name": "pg-parameterize",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "A small helper to parameterize your node-pg query",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "mocha test.js"
+    "lint": "tslint --project tsconfig.json ./src/*.ts",
+    "lint-fix": "tslint ./src/*.ts --fix",
+    "compile": "tsc",
+    "compile-watch": "tsc --watch",
+    "test": "mocha dist/test.js",
+    "test-watch": "mocha dist/test.js --watch"
   },
   "repository": {
     "type": "git",
@@ -26,7 +31,12 @@
   },
   "homepage": "https://github.com/bergur/pg-parameterize#readme",
   "devDependencies": {
-    "chai": "^4.1.1",
-    "mocha": "^3.5.0"
+    "@types/chai": "^4.1.6",
+    "@types/mocha": "^5.2.5",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.1.3"
   }
 }
