@@ -21,15 +21,15 @@ const flatten = function(arr) {
     },[])
 }
 
-const tuple = function(arr, ordinal) {
+const tuple = function(arr, makeOrdinal) {
     const tuple = arr.map(function(item) {        
 	    return '(' + item.map(value => '?').join(',') +')';
     }).join(',');
     
-    if (!ordinal) {
+    if (!makeOrdinal) {
         return tuple;
     } else {                
-        return this.ordinal(tuple);        
+        return ordinal(tuple);        
     }
 }
 
