@@ -4,3 +4,7 @@ node_js:
  - "6"
 sudo: false
 dist: trusty
+script:
+  - npm run test
+after_script:
+  - npm run coverage
