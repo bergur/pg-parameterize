@@ -4,5 +4,7 @@ node_js:
  - "6"
 sudo: false
 dist: trusty
+scripts:
+  - npm install codecov -g
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - codecov
