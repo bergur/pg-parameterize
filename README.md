@@ -3,6 +3,7 @@ A small helper for [node-postgres](https://github.com/brianc/node-postgres) to h
 
 [![Build Status](https://travis-ci.org/bergur/pg-parameterize.svg?branch=master)](https://travis-ci.org/bergur/pg-parameterize)
 [![Version](https://img.shields.io/npm/v/pg-parameterize.svg)](https://npmjs.org/package/pg-parameterize)
+[![Coverage Status](https://coveralls.io/repos/github/bergur/pg-parameterize/badge.svg)](https://coveralls.io/github/bergur/pg-parameterize)
 
 
 Building dynamic queries can be tricky since node-postgres uses ordinal paramters ($1, $2, etc). That means that the parameter has a numerical value so there's a clear ordering of the variables. This module just modifies strings and arrays so it's easier to create SQL statements for the node-postgres query.
