@@ -34,7 +34,7 @@ function simpleFind(options)
   
   if (options.zipcode) {
     sql += ' AND zipcode = ?'
-    values.push(options.type)
+    values.push(options.zipcode)
   }
   
   const sqlOrdinal = toOrdinal(sql);
