@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-      "types": ["mocha", "chai"],
+      "types": ["jest"],
       "module": "commonjs",
       "noUnusedLocals": true,
       "declaration": true,

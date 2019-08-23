@@ -1,5 +1,8 @@
 .travis.yml
-src
-node_modules
+.coveralls.yml
+.jestrc
+src/
+coverage/
+node_modules/
 tsconfig.json
 tslint.json
