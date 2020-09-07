@@ -4,10 +4,14 @@ node_js:
 sudo: false
 dist: trusty
 install:
- - npm install
+ - npm ci
 script:
   - npm run clean
   - npm run compile
   - npm run test  
 after_success:
   - npm run coverage
+deploy:
+  proivder: npm
+  email: $NPM_EMAIL
+  api_key: $NPM_API_KEY
