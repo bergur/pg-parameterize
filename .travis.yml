@@ -7,6 +7,8 @@ dist: trusty
 install:
  - npm install
 script:
+  - npm run clean
+  - npm run compile
   - npm run test  
 after_success:
   - npm run coverage
