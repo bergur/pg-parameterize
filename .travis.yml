@@ -1,17 +1,22 @@
-language: node_js
-node_js:
- - "lts/*"
-sudo: false
-dist: trusty
-install:
- - npm ci
-script:
-  - npm run clean
-  - npm run compile
-  - npm run test  
-after_success:
-  - npm run coverage
-deploy:
-  proivder: npm
-  email: $NPM_EMAIL
-  api_key: $NPM_API_KEY
+jobs:
+  include:
+    - stage: 'compile and test'
+      language: node_js
+      node_js:
+      - "lts/*"
+      sudo: false
+      dist: trusty
+      install:
+        - npm ci
+      script:
+        - npm run clean
+        - npm run compile
+        - npm run test  
+    - stage: 'check coverage'
+      script:
+      - npm run coverage
+    - stage: 'deploy to npm'
+      deploy:
+        proivder: npm
+        email: $NPM_EMAIL
+        api_key: $NPM_API_KEY.
